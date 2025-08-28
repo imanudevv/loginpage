@@ -1,13 +1,13 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'   // ✅ Import useNavigate
+import { useNavigate } from 'react-router-dom' 
 import './Loginpage.css'
 
 const Loginpage = () => {
-  const navigate = useNavigate();  // ✅ Correctly use it here
+  const navigate = useNavigate();  
 
   const handleLogin = (e) => {
     e.preventDefault();
-    // ✅ After mock login, redirect to /list
+    
     navigate("/list");
   };
 
@@ -15,7 +15,7 @@ const Loginpage = () => {
     <div className='container'>
       <h1>Login</h1>
       <div className='log'>
-        <form onSubmit={handleLogin}>   {/* ✅ Hook up handleLogin */}
+        <form onSubmit={handleLogin}>  
           <input type="text" placeholder='Username' required />
           <input type="password" placeholder='Password' required />
           <button type='submit'>Login</button>
